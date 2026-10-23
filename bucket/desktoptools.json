@@ -1,0 +1,32 @@
+{
+    "version": "1.2.9",
+    "description": "Screenshots, screen recording, drawing and presentation tools for Windows 11.",
+    "homepage": "https://github.com/vg2222/DesktopTools",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/vg2222/DesktopTools/releases/download/v1.2.9/DesktopTools-1.2.9-win-x64-portable.zip",
+            "hash": "b2ec92406c6d4bd398ea56a9bf3469a533c375529505c57a44af132386599445"
+        }
+    },
+    "extract_dir": "DesktopTools-win-x64",
+    "shortcuts": [
+        [
+            "DesktopTools.exe",
+            "DesktopTools"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/vg2222/DesktopTools/releases/download/v$version/DesktopTools-$version-win-x64-portable.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/vg2222/DesktopTools/releases/download/v$version/SHA256SUMS.txt",
+            "regex": "$sha256\\s+DesktopTools-$version-win-x64-portable.zip"
+        }
+    },
+    "notes": "The app is not code-signed; Windows SmartScreen may ask for confirmation on first start."
+}
